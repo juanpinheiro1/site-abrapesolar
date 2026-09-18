@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ABRAPE Solar — Associação Brasileira dos Produtores de Energia Solar</title>
+<meta name="description" content="Soluções integradas de geração de energia distribuída e por assinatura em todo o Brasil. Economize até 20% na conta de luz ou invista em usinas solares com gestão completa.">
+<meta property="og:title" content="ABRAPE Solar — Energia por assinatura e investimento em geração distribuída">
+<meta property="og:description" content="Conectamos consumidores a usinas solares próximas e damos gestão completa a quem investe em geração distribuída.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abrapesolar.com.br">
+<meta property="og:image" content="https://abrapesolar.com.br/img/abrape-solar.png">
+<meta name="theme-color" content="#1E2A6E">
+<link rel="icon" href="img/abrape-marca.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap">
+<style>
+:root{
+  --navy:#1E2A6E; --navy-2:#141C4D; --blue:#3C4FA6; --gold:#FFC20E; --gold-dark:#D99E00;
+  --green:#17813C; --orange:#F5A100;
+  --bg:#F8F7F3; --surface:#FFFFFF; --ink:#16213A; --muted:#5C6780; --line:#E4E1D8;
+  --shadow:0 2px 14px rgba(20,28,77,.07);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Archivo',system-ui,-apple-system,sans-serif;font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Sora','Archivo',sans-serif;margin:0;line-height:1.16;text-wrap:balance;letter-spacing:-.015em}
+p{margin:0}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:20px;padding:11px 0}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}
+.brand img{height:46px;width:auto}
+.brand b{display:block;font-family:'Sora',sans-serif;font-weight:800;font-size:14px;color:var(--navy);letter-spacing:.02em;line-height:1.1}
+.brand span{display:block;font-size:10.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+nav{margin-left:auto;display:flex;align-items:center;gap:4px}
+nav a{padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14.5px;color:var(--ink);white-space:nowrap}
+nav a:hover{background:#EFEEE8;color:var(--navy)}
+nav a.login{border:1.5px solid var(--navy);color:var(--navy);margin-left:6px}
+nav a.login:hover{background:var(--navy);color:#fff}
+.burger{display:none;margin-left:auto;background:none;border:1.5px solid var(--line);border-radius:9px;padding:8px 10px;cursor:pointer;color:var(--navy);font-size:17px;line-height:1}
+@media(max-width:940px){
+  nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:10px 16px 16px;gap:2px;box-shadow:var(--shadow)}
+  nav.open{display:flex}
+  nav a{padding:11px 10px}
+  nav a.login{margin:6px 0 0;text-align:center}
+  .burger{display:block}
+}
+
+/* ---------- botões ---------- */
+.btn{display:inline-block;padding:13px 26px;border-radius:11px;text-decoration:none;font-weight:700;font-size:15.5px;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:transform .12s ease,filter .12s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:#3A2B00}
+.btn-gold:hover{filter:brightness(1.06)}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-out{border-color:var(--navy);color:var(--navy)}
+.btn-out:hover{background:var(--navy);color:#fff}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:linear-gradient(150deg,var(--navy) 0%,var(--navy-2) 62%,#0E1436 100%);color:#fff;overflow:hidden}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.06fr .94fr;gap:42px;align-items:center;padding-block:76px 84px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,194,14,.4);border-radius:99px;padding:6px 14px;margin-bottom:20px}
+.hero h1{font-size:clamp(31px,4.1vw,50px);font-weight:800;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{font-size:17.5px;color:#D3D8EE;max-width:37ch;margin-bottom:28px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.heroart{position:relative}
+.heroart svg{width:100%;height:auto;filter:drop-shadow(0 18px 40px rgba(0,0,0,.34))}
+@media(max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:34px;padding-block:52px 58px}
+  .heroart{max-width:340px;margin:0 auto}
+}
+
+/* ---------- faixa de números ---------- */
+.stats{background:var(--surface);border-bottom:1px solid var(--line)}
+.stats .wrap{padding-block:30px}
+.stats .cap{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:18px}
+.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:860px;margin:0 auto}
+.stat{text-align:center;padding:14px 10px;border-radius:14px;background:linear-gradient(180deg,#FFFBEC,#FFF7DE);border:1px solid #F3E3B0}
+.stat b{display:block;font-family:'Sora',sans-serif;font-size:clamp(23px,3.2vw,31px);font-weight:800;color:var(--navy);line-height:1.1}
+.stat span{display:block;font-size:13px;color:var(--muted);margin-top:3px}
+@media(max-width:620px){.statgrid{grid-template-columns:1fr;gap:10px}.stat{display:flex;align-items:baseline;justify-content:center;gap:9px;text-align:left}.stat b{font-size:24px}.stat span{margin:0}}
+
+/* ---------- seções ---------- */
+section{padding-block:70px}
+.sechead{max-width:640px;margin-bottom:38px}
+.sechead .kicker{font-size:12px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:10px}
+.sechead h2{font-size:clamp(25px,3.3vw,36px);font-weight:700;margin-bottom:12px}
+.sechead p{color:var(--muted);font-size:17px}
+.center{margin-left:auto;margin-right:auto;text-align:center}
+
+/* três caminhos */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px 24px 26px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.card .ico{width:52px;height:52px;border-radius:13px;display:grid;place-items:center;margin-bottom:16px}
+.card h3{font-size:19.5px;font-weight:700;margin-bottom:9px}
+.card p{color:var(--muted);font-size:15.5px;flex:1}
+.card .go{margin-top:18px;font-weight:700;font-size:15px;text-decoration:none;color:var(--navy);display:inline-flex;align-items:center;gap:7px}
+.card .go:hover{color:var(--gold-dark)}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
+
+/* blocos alternados */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.split.rev .art{order:-1}
+@media(max-width:860px){.split{grid-template-columns:1fr;gap:30px}.split.rev .art{order:0}}
+.checks{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:11px}
+.checks li{display:flex;gap:11px;align-items:flex-start;font-size:16px}
+.checks svg{flex-shrink:0;margin-top:3px}
+.art{display:grid;place-items:center}
+.art svg{width:100%;max-width:420px;height:auto}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.step b{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--navy);color:var(--gold);font-family:'Sora',sans-serif;font-size:14px;margin-bottom:11px}
+.step h4{margin:0 0 5px;font-size:16.5px;font-family:'Sora',sans-serif;font-weight:600}
+.step p{color:var(--muted);font-size:14.8px}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+
+.dark{background:linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff}
+.dark .sechead p{color:#C6CCE6}
+.dark .sechead .kicker{color:var(--gold)}
+.feat{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.feat div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:22px}
+.feat h4{margin:0 0 6px;font-family:'Sora',sans-serif;font-size:17px;font-weight:600;color:var(--gold)}
+.feat p{color:#C9CFE8;font-size:15.3px}
+@media(max-width:760px){.feat{grid-template-columns:1fr}}
+
+/* notícias */
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.nw{background:var(--surface);border:1px solid var(--line);border-radius:15px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);text-decoration:none;color:inherit}
+.nw:hover{border-color:var(--gold)}
+.nw .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--navy),var(--blue));display:grid;place-items:center}
+.nw .thumb img{width:100%;height:100%;object-fit:cover}
+.nw .bd{padding:18px 19px 20px;display:flex;flex-direction:column;flex:1}
+.nw .dt{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:8px}
+.nw h3{font-size:17.5px;font-weight:600;margin-bottom:8px}
+.nw p{color:var(--muted);font-size:15px;flex:1}
+.nw .src{margin-top:13px;font-size:13px;color:var(--muted)}
+@media(max-width:860px){.news{grid-template-columns:1fr}}
+
+/* quem somos */
+.mission{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:14px;padding:26px 28px;margin-top:26px}
+.mission b{font-family:'Sora',sans-serif;color:var(--navy);display:block;margin-bottom:7px;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.mission p{font-size:18px}
+.objs{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:14px}
+.objs li{display:flex;gap:13px;align-items:flex-start;color:var(--muted);font-size:16px}
+.objs i{flex-shrink:0;width:9px;height:9px;border-radius:50%;background:var(--gold);margin-top:9px}
+
+/* contato */
+.formcard{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:var(--shadow)}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1/-1}
+.f label{font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.f input,.f select,.f textarea{padding:12px 13px;border:1.5px solid var(--line);border-radius:10px;font-family:inherit;font-size:16px;background:var(--bg);color:var(--ink)}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--navy)}
+.f textarea{min-height:104px;resize:vertical}
+@media(max-width:640px){.fgrid{grid-template-columns:1fr}}
+.fmsg{margin-top:14px;padding:13px 15px;border-radius:11px;font-size:15px;display:none}
+.fmsg.ok{display:block;background:#E6F4EC;color:#14622F;border:1px solid #BCE0CB}
+.fmsg.err{display:block;background:#FBE9E5;color:#9B3320;border:1px solid #F0C8BF}
+.contatos{display:grid;gap:16px;align-content:start}
+.ct{display:flex;gap:13px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:17px 18px;text-decoration:none}
+.ct:hover{border-color:var(--gold)}
+.ct b{display:block;font-family:'Sora',sans-serif;font-size:14.5px;margin-bottom:2px}
+.ct span{color:var(--muted);font-size:14.5px;word-break:break-word}
+
+/* footer */
+footer{background:var(--navy-2);color:#C9CFE8;padding-block:48px 26px;font-size:15px}
+.fgrid2{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:34px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.13)}
+footer img.flogo{height:78px;margin-bottom:14px;filter:brightness(0) invert(1);opacity:.95}
+footer h4{font-family:'Sora',sans-serif;font-size:14px;color:#fff;margin:0 0 13px;letter-spacing:.05em;text-transform:uppercase}
+footer a{color:#C9CFE8;text-decoration:none;display:block;padding:4px 0}
+footer a:hover{color:var(--gold)}
+.social{display:flex;gap:10px;margin-top:14px}
+.social a{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.1);padding:0}
+.social a:hover{background:var(--gold)}
+.social a:hover svg{fill:#3A2B00}
+.social svg{fill:#fff;width:18px;height:18px}
+.copy{padding-top:22px;font-size:13.5px;color:#9AA3C4;display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap}
+@media(max-width:760px){.fgrid2{grid-template-columns:1fr;gap:26px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="brand" href="#topo">
+      <img src="img/abrape-marca.png" alt="ABRAPE Solar">
+      <span class="bt"><b>ABRAPE SOLAR</b><span>Produtores de Energia Solar</span></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav id="nav">
+      <a href="#consumidores">Consumidores</a>
+      <a href="#investidores">Investidores</a>
+      <a href="#noticias" id="navnews" hidden>Notícias</a>
+      <a href="#quem-somos">Quem somos</a>
+      <a href="#contato">Fale conosco</a>
+      <a class="login" href="https://juanpinheiro1.github.io/mesa-comando-abrape/">Login</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="hero" id="topo">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Associação Brasileira dos Produtores de Energia Solar</span>
+      <h1>Soluções integradas de geração de energia distribuída e <em>por assinatura</em> em todo o Brasil</h1>
+      <p class="lead">Conectamos quem quer economizar na conta de luz a usinas solares próximas — e damos gestão completa a quem investe em geração distribuída.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#consumidores">Quero economizar</a>
+        <a class="btn btn-ghost" href="#investidores">Quero investir</a>
+      </div>
+    </div>
+    <div class="heroart" aria-hidden="true">
+      <svg viewBox="0 0 400 380" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#FFD84D"/><stop offset="1" stop-color="#F5A100"/>
+          </linearGradient>
+          <linearGradient id="gGreen" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#1FA34E"/><stop offset="1" stop-color="#136B32"/>
+          </linearGradient>
+          <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#FFD22E"/><stop offset="1" stop-color="#E8A900"/>
+          </linearGradient>
+          <linearGradient id="gBlue" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#4A5FC1"/><stop offset="1" stop-color="#232E80"/>
+          </linearGradient>
+        </defs>
+        <g stroke="#FFC20E" stroke-width="3.4" stroke-linecap="round" opacity=".9">
+          <line x1="200" y1="10" x2="200" y2="40"/>
+          <line x1="128" y1="30" x2="143" y2="57"/><line x1="272" y1="30" x2="257" y2="57"/>
+          <line x1="76" y1="82" x2="103" y2="97"/><line x1="324" y1="82" x2="297" y2="97"/>
+          <line x1="158" y1="17" x2="167" y2="46"/><line x1="242" y1="17" x2="233" y2="46"/>
+          <line x1="99" y1="52" x2="121" y2="74"/><line x1="301" y1="52" x2="279" y2="74"/>
+        </g>
+        <path d="M130 140a70 70 0 0 1 140 0z" fill="url(#sun)"/>
+        <g>
+          <path d="M200 150 258 186 200 222 142 186z" fill="url(#gGold)"/>
+          <path d="M112 168 170 132 228 168 170 204z" fill="url(#gGreen)" opacity=".97"/>
+          <path d="M288 168 230 132 172 168 230 204z" fill="url(#gGreen)" opacity=".97"/>
+          <path d="M112 204 170 168 228 204 170 240z" fill="url(#gGold)"/>
+          <path d="M288 204 230 168 172 204 230 240z" fill="url(#gGold)"/>
+          <path d="M200 222 258 258 200 294 142 258z" fill="url(#gBlue)"/>
+          <path d="M143 240 200 204 257 240 200 276z" fill="url(#gBlue)" opacity=".92"/>
+        </g>
+        <g stroke="rgba(255,255,255,.35)" stroke-width="1.1">
+          <path d="M142 186 258 186M170 132 170 204M230 132 230 204M142 258 258 258M200 150 200 294"/>
+        </g>
+        <ellipse cx="200" cy="322" rx="122" ry="15" fill="rgba(255,255,255,.09)"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ================= NÚMEROS DO SETOR ================= -->
+<div class="stats">
+  <div class="wrap">
+    <p class="cap">O mercado solar brasileiro</p>
+    <div class="statgrid">
+      <div class="stat"><b>+80 mil</b><span>projetos no país</span></div>
+      <div class="stat"><b>+10 GW</b><span>de potência instalada</span></div>
+      <div class="stat"><b>+3,5 mil</b><span>cidades atendidas</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= TRÊS CAMINHOS ================= -->
+<section id="solucoes">
+  <div class="wrap">
+    <div class="sechead center">
+      <p class="kicker">Vantagens em fazer parte</p>
+      <h2>Três caminhos para entrar na energia solar</h2>
+      <p>Seja para reduzir a conta de luz, investir em uma usina ou estruturar um projeto sob medida, a ABRAPE Solar acompanha cada etapa.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="ico" style="background:#FFF4CE">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D99E00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>
+        </div>
+        <h3>Energia por assinatura</h3>
+        <p>Até 20% de desconto na fatura, sem obra, sem investimento e sem fidelidade. A energia de uma usina próxima é injetada direto na sua conta.</p>
+        <a class="go" href="#consumidores">Assine →</a>
+      </div>
+      <div class="card">
+        <div class="ico" style="background:#E7F3EC">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#17813C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-8"/><path d="M17 7h4v4"/></svg>
+        </div>
+        <h3>Investimento em geração</h3>
+        <p>Usinas de 75 kW a 3 MW com gestão completa: rateio, apuração, faturamento e relatórios mensais de rentabilidade.</p>
+        <a class="go" href="#investidores">Invista →</a>
+      </div>
+      <div class="card">
+        <div class="ico" style="background:#E8EBF7">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3C4FA6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/><circle cx="12" cy="12" r="3.6"/></svg>
+        </div>
+        <h3>Soluções personalizadas</h3>
+        <p>Projetos sob medida para indústrias, condomínios, redes e instituições — do estudo de viabilidade à operação da usina.</p>
+        <a class="go" href="#contato">Consulte →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONSUMIDORES ================= -->
+<section id="consumidores" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap split">
+    <div>
+      <div class="sechead" style="margin-bottom:0">
+        <p class="kicker">Para consumidores</p>
+        <h2>Economize na sua conta de energia elétrica</h2>
+        <p>Você pode ter até <strong style="color:var(--ink)">20% de desconto</strong> na fatura recebendo, na sua própria conta, a energia gerada por uma de nossas usinas. Não é preciso instalar painéis nem fazer qualquer obra — todo o processo é 100% online.</p>
+      </div>
+      <ul class="checks">
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#17813C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5.5 5.5L20 7"/></svg> Sem investimento inicial</li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#17813C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5.5 5.5L20 7"/></svg> Sem contrato de fidelidade</li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#17813C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5.5 5.5L20 7"/></svg> Processo 100% digital</li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#17813C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5.5 5.5L20 7"/></svg> Sem instalação de equipamentos</li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#17813C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5.5 5.5L20 7"/></svg> Sem troca de titularidade da conta</li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#17813C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5.5 5.5L20 7"/></svg> Atendimento personalizado</li>
+      </ul>
+      <div style="margin-top:26px"><a class="btn btn-gold" href="#contato">Solicite sua proposta agora</a></div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+        <rect x="24" y="30" width="352" height="240" rx="18" fill="#F8F7F3" stroke="#E4E1D8" stroke-width="2"/>
+        <rect x="52" y="60" width="126" height="13" rx="6.5" fill="#D8D5CB"/>
+        <rect x="52" y="86" width="86" height="11" rx="5.5" fill="#E4E1D8"/>
+        <g>
+          <rect x="52" y="120" width="296" height="44" rx="11" fill="#FFF"/>
+          <rect x="66" y="133" width="108" height="9" rx="4.5" fill="#D8D5CB"/>
+          <rect x="66" y="148" width="74" height="8" rx="4" fill="#E4E1D8"/>
+          <text x="332" y="149" text-anchor="end" font-family="Sora,sans-serif" font-size="19" font-weight="700" fill="#B9B5A8" text-decoration="line-through">R$ 980</text>
+        </g>
+        <g>
+          <rect x="52" y="176" width="296" height="56" rx="11" fill="#FFFBEC" stroke="#F3E3B0" stroke-width="1.6"/>
+          <rect x="66" y="190" width="132" height="9" rx="4.5" fill="#E2C878"/>
+          <rect x="66" y="206" width="92" height="8" rx="4" fill="#EFDCA8"/>
+          <text x="332" y="213" text-anchor="end" font-family="Sora,sans-serif" font-size="24" font-weight="800" fill="#1E2A6E">R$ 784</text>
+        </g>
+        <g transform="translate(286,236)">
+          <rect x="0" y="0" width="62" height="22" rx="11" fill="#17813C"/>
+          <text x="31" y="15.5" text-anchor="middle" font-family="Archivo,sans-serif" font-size="12" font-weight="700" fill="#fff">−20%</text>
+        </g>
+        <g transform="translate(300,54)">
+          <circle cx="26" cy="26" r="21" fill="#FFD84D"/>
+          <g stroke="#F5A100" stroke-width="2.6" stroke-linecap="round">
+            <line x1="26" y1="-1" x2="26" y2="6"/><line x1="26" y1="46" x2="26" y2="53"/>
+            <line x1="-1" y1="26" x2="6" y2="26"/><line x1="46" y1="26" x2="53" y2="26"/>
+            <line x1="7" y1="7" x2="12" y2="12"/><line x1="40" y1="40" x2="45" y2="45"/>
+            <line x1="45" y1="7" x2="40" y2="12"/><line x1="12" y1="40" x2="7" y2="45"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:56px">
+    <div class="sechead center" style="margin-bottom:0"><h2 style="font-size:clamp(21px,2.6vw,27px)">Como funciona</h2></div>
+    <div class="steps">
+      <div class="step"><b>1</b><h4>Você envia sua conta de luz</h4><p>Analisamos o seu consumo e apresentamos, sem compromisso, quanto você passa a economizar por mês.</p></div>
+      <div class="step"><b>2</b><h4>Conectamos você a uma usina</h4><p>Sua unidade consumidora é vinculada a uma usina próxima, dentro das regras da geração distribuída (Lei 14.300/2022).</p></div>
+      <div class="step"><b>3</b><h4>O desconto aparece na fatura</h4><p>A energia gerada é injetada na sua conta e você acompanha, todo mês, um demonstrativo com a economia obtida.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INVESTIDORES ================= -->
+<section id="investidores" class="dark">
+  <div class="wrap">
+    <div class="sechead">
+      <p class="kicker">Para investidores</p>
+      <h2>Sua usina solar gerando renda, com gestão completa</h2>
+      <p>Com atuação em todo o Brasil e um time especializado em geração distribuída, a ABRAPE Solar orienta a implantação de usinas de 75 kW a 3 MW e cuida da monetização dos créditos — de olho na rentabilidade e no payback do seu investimento.</p>
+    </div>
+    <div class="feat">
+      <div><h4>Viabilidade e implantação</h4><p>Estudo técnico, dimensionamento, homologação junto à distribuidora e acompanhamento da obra até a usina entrar em operação.</p></div>
+      <div><h4>Rateio e compensação</h4><p>Distribuição dos créditos entre as unidades consumidoras e conferência mensal do que foi efetivamente compensado em cada fatura.</p></div>
+      <div><h4>Faturamento e cobrança</h4><p>Emissão das faturas aos consumidores, cobrança bancária e controle de recebimentos — sem que você precise administrar nada.</p></div>
+      <div><h4>Relatórios mensais</h4><p>Demonstrativo de geração, energia distribuída, receita do ciclo e saldo acumulado da usina, com todos os documentos arquivados.</p></div>
+    </div>
+    <div style="margin-top:32px"><a class="btn btn-gold" href="#contato">Quero investir em uma usina</a></div>
+  </div>
+</section>
+
+<!-- ================= NOTÍCIAS ================= -->
+<section id="noticias" hidden>
+  <div class="wrap">
+    <div class="sechead">
+      <p class="kicker">Notícias</p>
+      <h2>O que acontece no setor solar</h2>
+      <p>Acompanhe regulação, mercado e novidades da geração distribuída no Brasil.</p>
+    </div>
+    <div class="news" id="newsgrid"></div>
+  </div>
+</section>
+
+<!-- ================= QUEM SOMOS ================= -->
+<section id="quem-somos" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sechead">
+      <p class="kicker">Quem somos</p>
+      <h2>Uma associação que conecta toda a cadeia da energia solar</h2>
+      <p>A ABRAPE Solar é uma organização empresarial com atuação em todo o território nacional. Seguindo a legislação do setor elétrico brasileiro, atua com serviços especializados para a viabilização da construção e da gestão de usinas de geração em todo o Brasil, possibilitando investimento seguro aos produtores e economia aos consumidores na geração distribuída.</p>
+    </div>
+    <ul class="objs">
+      <li><i></i><span>Congregar especialistas da área de energia solar e usuários de energia proveniente de usinas de geração distribuída, atendendo ao disposto na lei que instituiu o marco legal da micro e minigeração.</span></li>
+      <li><i></i><span>Agrupar pessoas físicas e jurídicas interessadas na geração distribuída de energia de usinas fotovoltaicas em todos os estados brasileiros.</span></li>
+      <li><i></i><span>Promover o aprimoramento e a integração dos profissionais atuantes no segmento de energia solar no Brasil.</span></li>
+    </ul>
+    <div class="mission">
+      <b>Nossa missão</b>
+      <p>Conectar toda a cadeia produtiva de energia elétrica, gerando desenvolvimento sustentável e o fortalecimento do setor na produção de energias renováveis.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTATO ================= -->
+<section id="contato">
+  <div class="wrap">
+    <div class="sechead">
+      <p class="kicker">Fale conosco</p>
+      <h2>Queremos você conosco</h2>
+      <p>Preencha o formulário e um de nossos especialistas retorna o seu contato.</p>
+    </div>
+    <div class="split" style="gap:32px;align-items:start">
+      <div class="formcard">
+        <form id="lead" novalidate>
+          <div class="fgrid">
+            <div class="f full"><label for="l-nome">Nome *</label><input id="l-nome" name="nome" required autocomplete="name"></div>
+            <div class="f"><label for="l-email">E-mail *</label><input id="l-email" name="email" type="email" required autocomplete="email"></div>
+            <div class="f"><label for="l-tel">Telefone / WhatsApp</label><input id="l-tel" name="telefone" type="tel" autocomplete="tel"></div>
+            <div class="f"><label for="l-cidade">Cidade</label><input id="l-cidade" name="cidade" autocomplete="address-level2"></div>
+            <div class="f"><label for="l-uf">Estado</label><input id="l-uf" name="uf" maxlength="2" placeholder="PB" autocomplete="address-level1"></div>
+            <div class="f full"><label for="l-int">Tenho interesse em</label>
+              <select id="l-int" name="interesse">
+                <option value="ter energia solar por assinatura">Ter energia solar por assinatura</option>
+                <option value="ser produtor de energia solar">Ser produtor de energia solar (investir)</option>
+                <option value="solucoes personalizadas de usina solar">Soluções personalizadas de usina solar</option>
+                <option value="outro assunto">Outro assunto</option>
+              </select>
+            </div>
+            <div class="f full"><label for="l-msg">Mensagem</label><textarea id="l-msg" name="mensagem" placeholder="Conte um pouco sobre o que você precisa. Se já for consumidor, informe o valor médio da sua conta de energia."></textarea></div>
+          </div>
+          <div style="margin-top:18px"><button class="btn btn-navy" type="submit" id="l-btn">Enviar mensagem</button></div>
+          <div class="fmsg" id="l-msgbox" role="status"></div>
+        </form>
+      </div>
+      <div class="contatos">
+        <a class="ct" href="mailto:contato@abrapesolar.com.br">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E2A6E" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg>
+          <span><b>E-mail</b><span>contato@abrapesolar.com.br</span></span>
+        </a>
+        <a class="ct" href="https://instagram.com/abrapesolar" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E2A6E" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="#1E2A6E" stroke="none"/></svg>
+          <span><b>Instagram</b><span>@abrapesolar</span></span>
+        </a>
+        <div class="ct" style="cursor:default">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E2A6E" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <span><b>Atuação</b><span>Sede em Campina Grande/PB, com usinas e clientes em todo o Brasil.</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid2">
+      <div>
+        <img class="flogo" src="img/abrape-solar.png" alt="ABRAPE Solar">
+        <p style="max-width:34ch">Associação Brasileira dos Produtores de Energia Solar. Geração distribuída com segurança para quem investe e economia para quem consome.</p>
+        <div class="social">
+          <a href="https://instagram.com/abrapesolar" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.8-.1zm0 5.3a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 7.4a2.9 2.9 0 1 1 0-5.8 2.9 2.9 0 0 1 0 5.8zm5.7-7.6a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0z"/></svg></a>
+          <a href="https://facebook.com/abrapesolar" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3 0-1.3-.1-2.45-.1-2.4 0-4.05 1.5-4.05 4.2v2.2H7.5V13h2.7v8h3.3z"/></svg></a>
+          <a href="https://youtube.com/@abrapesolar" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M21.6 7.2c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8c.2.9.9 1.6 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <a href="#consumidores">Consumidores</a>
+        <a href="#investidores">Investidores</a>
+        <a href="#quem-somos">Quem somos</a>
+        <a href="#contato">Fale conosco</a>
+      </div>
+      <div>
+        <h4>Acesso</h4>
+        <a href="https://juanpinheiro1.github.io/mesa-comando-abrape/">Mesa de Comando</a>
+        <a href="mailto:contato@abrapesolar.com.br">contato@abrapesolar.com.br</a>
+        <a href="https://instagram.com/abrapesolar" target="_blank" rel="noopener">@abrapesolar</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© <span id="ano">2026</span> ABRAPE — Associação Brasileira dos Produtores de Energia Solar. Todos os direitos reservados.</span>
+      <span>CNPJ 51.356.461/0001-32</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+(function(){
+  var SB_URL='https://puepmnyffpfjttxmwfjt.supabase.co';
+  var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB1ZXBtbnlmZnBmanR0eG13Zmp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk2NTMzMzksImV4cCI6MjEwNTIyOTMzOX0.6waSiEVZE0Fm2QraExivstM8qjzK7NGQ6698wmzHxjw';
+  var sb=(window.supabase&&window.supabase.createClient)?window.supabase.createClient(SB_URL,SB_KEY):null;
+
+  document.getElementById('ano').textContent=new Date().getFullYear();
+
+  var burger=document.getElementById('burger'), nav=document.getElementById('nav');
+  burger.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+  });
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A')nav.classList.remove('open');});
+
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  var MES=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+  function dataBr(iso){var p=String(iso).slice(0,10).split('-');return p[2]+' '+MES[Number(p[1])-1]+' '+p[0];}
+
+  // ---- notícias do setor ----
+  if(sb){
+    sb.from('noticias').select('*').eq('publicado',true).order('destaque',{ascending:false}).order('data_publicacao',{ascending:false}).limit(6)
+      .then(function(r){
+        if(r.error||!r.data||!r.data.length)return;
+        var g=document.getElementById('newsgrid'),html='';
+        r.data.forEach(function(n){
+          var tag=n.url_fonte?'a':'div', attr=n.url_fonte?' href="'+esc(n.url_fonte)+'" target="_blank" rel="noopener"':'';
+          html+='<'+tag+' class="nw"'+attr+'>';
+          if(n.imagem_url)html+='<div class="thumb"><img src="'+esc(n.imagem_url)+'" alt="" loading="lazy"></div>';
+          html+='<div class="bd"><div class="dt">'+dataBr(n.data_publicacao)+'</div><h3>'+esc(n.titulo)+'</h3>';
+          if(n.resumo)html+='<p>'+esc(n.resumo)+'</p>';
+          if(n.fonte)html+='<div class="src">Fonte: '+esc(n.fonte)+'</div>';
+          html+='</div></'+tag+'>';
+        });
+        g.innerHTML=html;
+        document.getElementById('noticias').hidden=false;
+        document.getElementById('navnews').hidden=false;
+      }, function(){});
+  }
+
+  // ---- formulário ----
+  var form=document.getElementById('lead'), box=document.getElementById('l-msgbox'), btn=document.getElementById('l-btn');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    box.className='fmsg';box.textContent='';
+    var d={
+      nome:form.nome.value.trim(), email:form.email.value.trim(), telefone:form.telefone.value.trim(),
+      cidade:form.cidade.value.trim(), uf:form.uf.value.trim().toUpperCase(),
+      interesse:form.interesse.value, mensagem:form.mensagem.value.trim(), origem:'site'
+    };
+    if(!d.nome||!d.email){box.className='fmsg err';box.textContent='Por favor, informe ao menos o seu nome e e-mail.';return;}
+    if(!sb){
+      window.location.href='mailto:contato@abrapesolar.com.br?subject='+encodeURIComponent('Contato pelo site - '+d.nome)+'&body='+encodeURIComponent(d.mensagem||d.interesse);
+      return;
+    }
+    btn.disabled=true;btn.textContent='Enviando...';
+    sb.from('leads').insert(d).then(function(r){
+      btn.disabled=false;btn.textContent='Enviar mensagem';
+      if(r.error){
+        box.className='fmsg err';
+        box.innerHTML='Não conseguimos enviar agora. Fale com a gente por <a href="mailto:contato@abrapesolar.com.br">contato@abrapesolar.com.br</a>.';
+        return;
+      }
+      form.reset();
+      box.className='fmsg ok';
+      box.textContent='Mensagem enviada! Em breve um de nossos especialistas entra em contato com você.';
+    });
+  });
+})();
+</script>
+</body>
+</html>
